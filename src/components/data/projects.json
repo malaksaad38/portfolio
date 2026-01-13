@@ -8,7 +8,8 @@
       "Next.js",
       "MongoDB",
       "Auth.js",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "ShadCN UI"
     ],
     "icon": "BookOpen",
     "image": "/digital-diary.png",
