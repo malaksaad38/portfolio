@@ -91,7 +91,7 @@ export default function ContactForm() {
                             setFormData({...formData, name: e.target.value})
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                        text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                        text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                         focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
                     {errors.name && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.name}</p>}
@@ -108,7 +108,7 @@ export default function ContactForm() {
                             setFormData({...formData, email: e.target.value})
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                        text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                        text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                         focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
                     {errors.email && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.email}</p>}
@@ -126,7 +126,7 @@ export default function ContactForm() {
                         setFormData({...formData, subject: e.target.value})
                     }
                     className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                    text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                    text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                     focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                 />
                 {errors.subject && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.subject}</p>}
@@ -143,7 +143,7 @@ export default function ContactForm() {
                         setFormData({...formData, message: e.target.value})
                     }
                     className="w-full md:h-72 pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                    text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                    text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                     focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none font-semibold text-sm md:text-base"
                 />
                 {errors.message && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.message}</p>}

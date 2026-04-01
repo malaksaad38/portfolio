@@ -27,7 +27,7 @@ export default function CyberpunkSideNavbar() {
 
                 {/* Inner glass panel */}
                 <div
-                    className="relative h-full w-full rounded-3xl p-2 md:p-3 lg:p-4 bg-white/60 dark:bg-black/20 backdrop-blur-sm border border-black/5 dark:border-white/5">
+                    className="relative h-full w-full rounded-3xl p-2 md:p-3 lg:p-4 bg-background/60 backdrop-blur-sm border border-black/5 dark:border-white/5">
                     {/* rotating vertical title */}
                     {/* nav items */}
                     <nav className="h-full flex flex-col items-center justify-center gap-4">
@@ -61,7 +61,7 @@ export default function CyberpunkSideNavbar() {
                                     layout
                                     initial={{opacity: 0, x: -10}}
                                     whileHover={{opacity: 1, x: -20}}
-                                    className="pointer-events-none absolute left-14 md:left-16 lg:left-20 top-1/2 -translate-y-1/2 bg-white dark:bg-black/60 border border-black/10 dark:border-white/6 px-3 py-1 rounded-lg text-xs font-medium tracking-wide text-black dark:text-white/80 opacity-0 group-hover:opacity-100 transform -translate-x-2 transition-all duration-300"
+                                    className="pointer-events-none absolute left-14 md:left-16 lg:left-20 top-1/2 -translate-y-1/2 bg-background border border-black/10 dark:border-white/6 px-3 py-1 rounded-lg text-xs font-medium tracking-wide text-foreground opacity-0 group-hover:opacity-100 transform -translate-x-2 transition-all duration-300"
                                 >
                                     <span
                                         className="inline-block transform -rotate-6 text-neon-animated">{it.label}</span>

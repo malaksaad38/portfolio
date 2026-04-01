@@ -225,7 +225,7 @@ const CyberpunkMenu = () => {
                                 {/* content section */}
                                 <div className={"relative pt-80 sm:pt-0 backdrop-opacity-50"}>
                                     <div
-                                        className="sm:hidden block absolute top-72 left-4 bg-slate-100 dark:bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
+                                        className="sm:hidden block absolute top-72 left-4 bg-background w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
                                     </div>
                                     <motion.h1
                                         variants={textVariant}
@@ -239,7 +239,7 @@ const CyberpunkMenu = () => {
                                     <motion.h2
                                         variants={textVariant}
                                         custom={0.25}
-                                        className="text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
+                                        className="text-xl md:text-2xl font-bold text-foreground/80 mb-2 flex items-center gap-2"
                                     >
                                         <TerminalSquare className="hidden md:block w-6 h-6 text-blue-600 dark:text-blue-400"/>
                                         Full-Stack Developer & UI Specialist
@@ -262,7 +262,7 @@ const CyberpunkMenu = () => {
                                     <motion.p
                                         variants={textVariant}
                                         custom={0.4}
-                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-800 dark:text-gray-200 mb-2 font-light"
+                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-foreground mb-2 font-light"
                                     >
                                         I transform ideas into powerful digital solutions. Specializing in{" "}
                                         <span
@@ -275,7 +275,7 @@ const CyberpunkMenu = () => {
                                     <motion.p
                                         variants={textVariant}
                                         custom={0.45}
-                                        className="text-sm md:text-base opacity-70 text-gray-700 dark:text-gray-300 max-w-3xl mb-8"
+                                        className="text-sm md:text-base opacity-70 text-foreground/80 max-w-3xl mb-8"
                                     >
                                         With 4+ years of hands-on experience, I've helped 12+ companies achieve their
                                         digital goals through cutting-edge technology and creative problem-solving.
@@ -293,7 +293,7 @@ const CyberpunkMenu = () => {
                                                 12+
                                             </div>
                                             <div
-                                                className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                className="text-xs text-muted-foreground uppercase tracking-wider mt-2 font-semibold">
                                                 Projects Delivered
                                             </div>
                                         </div>
@@ -304,7 +304,7 @@ const CyberpunkMenu = () => {
                                                 08+
                                             </div>
                                             <div
-                                                className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                className="text-xs text-muted-foreground uppercase tracking-wider mt-2 font-semibold">
                                                 Happy Clients
                                             </div>
                                         </div>
@@ -315,7 +315,7 @@ const CyberpunkMenu = () => {
                                                 04+
                                             </div>
                                             <div
-                                                className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                className="text-xs text-muted-foreground uppercase tracking-wider mt-2 font-semibold">
                                                 Years Experience
                                             </div>
                                         </div>
@@ -323,7 +323,7 @@ const CyberpunkMenu = () => {
 
                                     {/* Tech Stack */}
                                     <motion.div variants={textVariant} custom={0.7} className="mb-8">
-                                        <h3 className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
+                                        <h3 className="text-xs text-muted-foreground/80 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
                                             <Cpu className="w-4 h-4 text-blue-600 dark:text-blue-400"/>
                                             Tech Stack & Expertise
                                         </h3>
@@ -381,7 +381,7 @@ const CyberpunkMenu = () => {
                                             >
                                                 <stat.icon
                                                     className="w-20 h-20 absolute opacity-15 right-0  text-blue-600 dark:text-blue-400"/>
-                                                <p className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">{stat.label}</p>
+                                                <p className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</p>
                                                 <p className="text-base md:text-lg font-black text-blue-700 dark:text-blue-300">{stat.value}</p>
                                             </div>
                                         ))}
@@ -391,7 +391,7 @@ const CyberpunkMenu = () => {
                                     <motion.div
                                         variants={textVariant}
                                         custom={1.1}
-                                        className="opacity-40 font-cyber tracking-widest text-[10px] md:text-xs text-gray-500 dark:text-gray-500 border-t border-blue-500/20 pt-6"
+                                        className="opacity-40 font-cyber tracking-widest text-[10px] md:text-xs text-muted-foreground/80 border-t border-blue-500/20 pt-6"
                                     >
                                         ▸ CRAFTING DIGITAL EXCELLENCE SINCE 2020 ▸
                                     </motion.div>
@@ -469,7 +469,7 @@ const CyberpunkMenu = () => {
                                     {/* ABOUT TEXT */}
                                     <motion.div
                                         variants={itemVariant}
-                                        className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 border-l-4 border-green-500 md:px-6 py-4 px-4 bg-green-500/10 dark:bg-green-500/5 rounded-r-lg"
+                                        className="text-base md:text-lg leading-relaxed text-foreground/80 border-l-4 border-green-500 md:px-6 py-4 px-4 bg-green-500/10 dark:bg-green-500/5 rounded-r-lg"
                                     ><p className="mb-4"> I'm <span
                                         className="font-black text-green-600 dark:text-green-400">Malak Saad</span>, a passionate full-stack
                                         developer and creative problem solver with a mission to build digital products
@@ -489,7 +489,7 @@ const CyberpunkMenu = () => {
                                                 <Layers className="w-6 h-6"/>
                                                 Expertise
                                             </h3>
-                                            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-3 font-semibold">
+                                            <ul className="text-foreground/80 text-sm space-y-3 font-semibold">
                                                 <li className="flex items-center gap-2"><Cpu
                                                     className="text-green-600 dark:text-green-400 w-4"/> Full-Stack Web Development
                                                 </li>
@@ -518,7 +518,7 @@ const CyberpunkMenu = () => {
                                                 <Award className="w-6 h-6"/>
                                                 Achievements
                                             </h3>
-                                            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-3 font-semibold">
+                                            <ul className="text-foreground/80 text-sm space-y-3 font-semibold">
                                                 <li className="flex items-center gap-2"><TrendingUp
                                                     className="text-green-600 dark:text-green-400 w-4"/> 12+ Successful Projects
                                                 </li>
@@ -554,29 +554,29 @@ const CyberpunkMenu = () => {
                                         <div className="grid md:grid-cols-2 gap-4">
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-800 dark:text-gray-200">BS in Computer Science</p>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400">UET • 2022</p>
+                                                    <p className="font-black text-foreground">BS in Computer Science</p>
+                                                    <p className="text-sm text-muted-foreground">UET • 2022</p>
                                                 </div>
                                             </div>
 
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-800 dark:text-gray-200">AWS Solutions Architect</p>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400">AWS • 2023</p>
+                                                    <p className="font-black text-foreground">AWS Solutions Architect</p>
+                                                    <p className="text-sm text-muted-foreground">AWS • 2023</p>
                                                 </div>
                                             </div>
 
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-800 dark:text-gray-200">Advanced React Developer</p>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400">Meta • 2024</p>
+                                                    <p className="font-black text-foreground">Advanced React Developer</p>
+                                                    <p className="text-sm text-muted-foreground">Meta • 2024</p>
                                                 </div>
                                             </div>
 
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-800 dark:text-gray-200">Full-Stack Web Mastery</p>
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400">Comprehensive Program •
+                                                    <p className="font-black text-foreground">Full-Stack Web Mastery</p>
+                                                    <p className="text-sm text-muted-foreground">Comprehensive Program •
                                                         2025</p>
                                                 </div>
                                             </div>
@@ -598,7 +598,7 @@ const CyberpunkMenu = () => {
                                                 <div
                                                     className="text-2xl md:text-3xl font-black text-green-600 dark:text-green-400 mb-1">{item.num}</div>
                                                 <div
-                                                    className="text-xs text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider">{item.label}</div>
+                                                    className="text-xs text-muted-foreground uppercase font-bold tracking-wider">{item.label}</div>
                                             </div>
                                         ))}
                                     </motion.div>
@@ -606,7 +606,7 @@ const CyberpunkMenu = () => {
                                     {/* FOOTER QUOTE */}
                                     <motion.p
                                         variants={itemVariant}
-                                        className="text-sm md:text-base text-gray-600 dark:text-gray-400 italic text-center border-top border-green-500/20 pt-6 flex items-center justify-center gap-2"
+                                        className="text-sm md:text-base text-muted-foreground italic text-center border-top border-green-500/20 pt-6 flex items-center justify-center gap-2"
                                     >
                                         <Sparkles className="w-4 h-4 text-green-600 dark:text-green-400"/>
                                         "When I'm not coding, I explore emerging tech, open-source, articles,
@@ -673,7 +673,7 @@ const CyberpunkMenu = () => {
 
                                 {/* SUBTEXT */}
                                 <motion.p variants={textVariant} custom={0.3}
-                                          className="text-gray-600 dark:text-gray-400 mb-8 text-base max-w-2xl">
+                                          className="text-muted-foreground mb-8 text-base max-w-2xl">
                                     Comprehensive web development solutions tailored to your unique business needs
                                 </motion.p>
 
@@ -735,7 +735,7 @@ const CyberpunkMenu = () => {
                                                 {service.title}
                                             </h3>
 
-                                            <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">{service.desc}</p>
+                                            <p className="text-xs text-muted-foreground mb-4">{service.desc}</p>
 
                                             <div className="flex flex-wrap gap-2 pt-4 border-t border-purple-500/20">
                                                 {service.features.map((feature, j) => (
@@ -798,8 +798,8 @@ const CyberpunkMenu = () => {
                                                     <div className="flex justify-center mb-3">{step.icon}</div>
                                                     <div
                                                         className="text-xl md:text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">{step.num}</div>
-                                                    <p className="font-semibold text-gray-700 dark:text-gray-300 text-sm mb-1">{step.title}</p>
-                                                    <p className="text-xs md:text-sm text-gray-500 dark:text-gray-500">{step.desc}</p>
+                                                    <p className="font-semibold text-foreground/80 text-sm mb-1">{step.title}</p>
+                                                    <p className="text-xs md:text-sm text-muted-foreground/80">{step.desc}</p>
                                                 </div>
                                             </motion.div>
                                         ))}
@@ -865,7 +865,7 @@ const CyberpunkMenu = () => {
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-600 dark:text-gray-400 mb-8 text-base max-w-2xl"
+                                    className="text-muted-foreground mb-8 text-base max-w-2xl"
                                 >
                                     Showcasing some of my best projects that demonstrate expertise in modern web
                                     development
@@ -953,7 +953,7 @@ const CyberpunkMenu = () => {
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-600 dark:text-gray-400 mb-8 text-base max-w-2xl"
+                                    className="text-muted-foreground mb-8 text-base max-w-2xl"
                                 >
                                     Have an exciting project? I'm always interested in hearing about new opportunities
                                     and collaborations.
@@ -1003,7 +1003,7 @@ const CyberpunkMenu = () => {
                                                         {contact.icon}
                                                     </div>
 
-                                                    <p className="text-sm text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider mb-2">
+                                                    <p className="text-sm text-muted-foreground uppercase font-bold tracking-wider mb-2">
                                                         {contact.label}
                                                     </p>
 
@@ -1024,12 +1024,12 @@ const CyberpunkMenu = () => {
                                 {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
                                     <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/10 dark:bg-red-500/5">
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider mb-2">Response
+                                        <p className="text-sm text-muted-foreground uppercase font-bold tracking-wider mb-2">Response
                                             Time</p>
                                         <p className="text-xl font-black text-red-700 dark:text-red-300">Within 12 minutes</p>
                                     </div>
                                     <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/10 dark:bg-red-500/5">
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider mb-2">Availability</p>
+                                        <p className="text-sm text-muted-foreground uppercase font-bold tracking-wider mb-2">Availability</p>
                                         <p className="text-xl font-black text-red-700 dark:text-red-300">Open for New Projects</p>
                                     </div>
                                 </motion.div>

@@ -66,19 +66,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                         href={project.live}
                         target="_blank"
                     >
-                        <h3 className="text-lg md:text-xl font-extrabold text-gray-800 dark:text-gray-200 mb-2
+                        <h3 className="text-lg md:text-xl font-extrabold text-foreground mb-2
                         group-hover:text-amber-700 dark:text-amber-300 transition-colors">
                             {project.title}
                         </h3>
                     </motion.a>
-                ) : <h3 className="text-lg md:text-xl font-extrabold text-gray-800 dark:text-gray-200 mb-2
+                ) : <h3 className="text-lg md:text-xl font-extrabold text-foreground mb-2
                         group-hover:text-amber-700 dark:text-amber-300 transition-colors">
                     {project.title}
                 </h3>}
 
 
                 {/* DESCRIPTION */}
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-1">{project.desc}</p>
+                <p className="text-sm text-muted-foreground mb-4 flex-1">{project.desc}</p>
 
                 {/* TAGS */}
                 <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-amber-500/20">
