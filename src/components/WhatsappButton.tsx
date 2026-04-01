@@ -16,7 +16,7 @@ Hello! I visited your website and would like to get in touch regarding your serv
             rel="noopener noreferrer"
             className="
         relative w-full px-6 py-4 rounded-xl font-bold tracking-widest uppercase text-sm md:text-base
-        text-red-300 border border-red-500 bg-black/40
+        text-red-700 dark:text-red-300 border border-red-500 bg-white dark:bg-black/40
         shadow-[0_0_15px_rgba(255,0,0,0.25)]
         transition-all duration-300
         flex items-center justify-center gap-3

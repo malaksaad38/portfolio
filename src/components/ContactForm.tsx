@@ -75,14 +75,14 @@ export default function ContactForm() {
             animate={{opacity: 1, y: 0}}
             transition={{duration: 0.5}}
         >
-            <h2 className="font-black text-red-400 mb-6 uppercase tracking-wider">
+            <h2 className="font-black text-red-600 dark:text-red-400 mb-6 uppercase tracking-wider">
                 Send Me a Message
             </h2>
 
             <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4">
                 {/* NAME */}
                 <div className="relative">
-                    <User className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
+                    <User className="absolute left-3 top-3 w-5 h-5 text-red-600 dark:text-red-400/60"/>
                     <input
                         type="text"
                         placeholder="Your Full Name"
@@ -91,15 +91,15 @@ export default function ContactForm() {
                             setFormData({...formData, name: e.target.value})
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                        text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                        text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
                         focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
-                    {errors.name && <p className="text-red-400 mt-1 text-sm">{errors.name}</p>}
+                    {errors.name && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.name}</p>}
                 </div>
 
                 {/* EMAIL */}
                 <div className="relative">
-                    <MailCheck className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
+                    <MailCheck className="absolute left-3 top-3 w-5 h-5 text-red-600 dark:text-red-400/60"/>
                     <input
                         type="email"
                         placeholder="Your Email Address"
@@ -108,16 +108,16 @@ export default function ContactForm() {
                             setFormData({...formData, email: e.target.value})
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                        text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                        text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
                         focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
-                    {errors.email && <p className="text-red-400 mt-1 text-sm">{errors.email}</p>}
+                    {errors.email && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.email}</p>}
                 </div>
             </div>
 
             {/* SUBJECT */}
             <div className="relative mb-4">
-                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
+                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-600 dark:text-red-400/60"/>
                 <input
                     type="text"
                     placeholder="Project Subject"
@@ -126,15 +126,15 @@ export default function ContactForm() {
                         setFormData({...formData, subject: e.target.value})
                     }
                     className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                    text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                    text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
                     focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                 />
-                {errors.subject && <p className="text-red-400 mt-1 text-sm">{errors.subject}</p>}
+                {errors.subject && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.subject}</p>}
             </div>
 
             {/* MESSAGE */}
             <div className="relative mb-4">
-                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
+                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-600 dark:text-red-400/60"/>
                 <textarea
                     placeholder="Tell me about your project..."
                     rows={6}
@@ -143,37 +143,37 @@ export default function ContactForm() {
                         setFormData({...formData, message: e.target.value})
                     }
                     className="w-full md:h-72 pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
-                    text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
+                    text-gray-700 dark:text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
                     focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none font-semibold text-sm md:text-base"
                 />
-                {errors.message && <p className="text-red-400 mt-1 text-sm">{errors.message}</p>}
+                {errors.message && <p className="text-red-600 dark:text-red-400 mt-1 text-sm">{errors.message}</p>}
             </div>
 
             {/* BUTTON */}
             <button
                 type="submit"
                 className="
-                w-full md:px-6 px-4 py-4 rounded-lg border border-red-500 text-red-300 font-black
+                w-full md:px-6 px-4 py-4 rounded-lg border border-red-500 text-red-700 dark:text-red-300 font-black
                 tracking-widest uppercase bg-gradient-to-r from-red-500/20 to-red-400/10
                 hover:from-red-500/40 hover:to-red-400/20 transition-all hover:scale-102
                 hover:shadow-lg hover:shadow-red-500/40 flex items-center justify-center gap-3
                 text-sm md:text-base
             "
             >
-                <Send className="w-5 h-5 text-red-300"/>
+                <Send className="w-5 h-5 text-red-700 dark:text-red-300"/>
                 {status === "sending" ? "Sending..." : "Send Message"}
             </button>
 
 
             {/* STATUS MESSAGE */}
             {status === "success" && (
-                <p className="text-green-400 mt-4 text-center font-semibold">
+                <p className="text-green-600 dark:text-green-400 mt-4 text-center font-semibold">
                     ✓ Message Sent Successfully!
                 </p>
             )}
 
             {status === "error" && (
-                <p className="text-red-400 mt-4 text-center font-semibold">
+                <p className="text-red-600 dark:text-red-400 mt-4 text-center font-semibold">
                     ✗ Failed to send message. Please check the errors above.
                 </p>
             )}

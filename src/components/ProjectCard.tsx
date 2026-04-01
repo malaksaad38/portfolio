@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
 
                 {/* ICON & NUMBER */}
                 <div className="absolute right-2 md:right-4 top-40 md:top-52 flex items-center justify-between opacity-60">
-                    <div className="text-2xl md:text-3xl font-bold text-amber-400 uppercase tracking-wider font-cyber-outline">
+                    <div className="text-2xl md:text-3xl font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider font-cyber-outline">
                         {project.num}
                     </div>
                 </div>
@@ -66,19 +66,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                         href={project.live}
                         target="_blank"
                     >
-                        <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2
-                        group-hover:text-amber-300 transition-colors">
+                        <h3 className="text-lg md:text-xl font-extrabold text-gray-800 dark:text-gray-200 mb-2
+                        group-hover:text-amber-700 dark:text-amber-300 transition-colors">
                             {project.title}
                         </h3>
                     </motion.a>
-                ) : <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2
-                        group-hover:text-amber-300 transition-colors">
+                ) : <h3 className="text-lg md:text-xl font-extrabold text-gray-800 dark:text-gray-200 mb-2
+                        group-hover:text-amber-700 dark:text-amber-300 transition-colors">
                     {project.title}
                 </h3>}
 
 
                 {/* DESCRIPTION */}
-                <p className="text-sm text-gray-400 mb-4 flex-1">{project.desc}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-1">{project.desc}</p>
 
                 {/* TAGS */}
                 <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-amber-500/20">
@@ -103,7 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                             href={project.github}
                             target="_blank"
                             className="flex items-center justify-center gap-2 px-3 py-2 border border-amber-400/40
-                            rounded-md text-amber-300 text-xs font-bold
+                            rounded-md text-amber-700 dark:text-amber-300 text-xs font-bold
                             hover:border-amber-300 hover:text-amber-200
                             hover:shadow-amber-400/40 hover:shadow-md
                             transition-all cyberpunk-btn"
@@ -120,7 +120,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                             href={project.live}
                             target="_blank"
                             className="flex items-center justify-center gap-2 px-3 py-2 border border-amber-400/40
-                            rounded-md text-amber-300 text-xs font-bold
+                            rounded-md text-amber-700 dark:text-amber-300 text-xs font-bold
                             hover:border-amber-300 hover:text-amber-200
                             hover:shadow-amber-400/40 hover:shadow-md
                             transition-all cyberpunk-btn"

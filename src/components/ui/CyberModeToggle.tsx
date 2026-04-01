@@ -53,7 +53,7 @@ export function CyberModeToggle({ activeColor }: { activeColor?: string }) {
       <button
         onClick={toggleTheme}
         className="relative flex items-center justify-center w-14 h-14 rounded-xl 
-                   bg-white/5 backdrop-blur-xl border border-white/10 
+                   bg-black/5 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10 
                    shadow-2xl overflow-hidden group/btn transition-all duration-300
                    hover:scale-105 active:scale-95"
         style={{
@@ -97,14 +97,14 @@ export function CyberModeToggle({ activeColor }: { activeColor?: string }) {
         </AnimatePresence>
 
         {/* Cyberpunk Decorative Corners */}
-        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 group-hover/btn:border-white/60 transition-colors" />
-        <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 group-hover/btn:border-white/60 transition-colors" />
+        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-black/30 dark:border-white/30 group-hover/btn:border-white/60 transition-colors" />
+        <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-black/30 dark:border-white/30 group-hover/btn:border-white/60 transition-colors" />
       </button>
 
       {/* Decorative text that appears on hover */}
       <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-mono tracking-[0.2em] 
                       opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none
-                      text-white/40 whitespace-nowrap">
+                      text-black dark:text-white/40 whitespace-nowrap">
         MODE::{isDark ? "DARK" : "LIGHT"}
       </div>
     </div>

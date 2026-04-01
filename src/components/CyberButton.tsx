@@ -101,7 +101,7 @@ export const CyberButton = React.forwardRef<HTMLButtonElement, CyberButtonProps>
                 />
 
                 {/* Text Content */}
-                <span className="relative z-30 text-[var(--primary)] font-semibold group-hover:text-white transition-colors duration-300 drop-shadow-[0_0_8px_var(--primary)]">
+                <span className="relative z-30 text-[var(--primary)] font-semibold group-hover:text-black dark:group-hover:text-white transition-colors duration-300 drop-shadow-[0_0_8px_var(--primary)]">
                     {(children as React.ReactNode) || label}
                 </span>
 
