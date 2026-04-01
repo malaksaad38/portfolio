@@ -225,7 +225,7 @@ const CyberpunkMenu = () => {
                                 {/* content section */}
                                 <div className={"relative pt-80 sm:pt-0 backdrop-opacity-50"}>
                                     <div
-                                        className="sm:hidden block absolute top-72 left-4 bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
+                                        className="sm:hidden block absolute top-72 left-4 bg-slate-100 dark:bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
                                     </div>
                                     <motion.h1
                                         variants={textVariant}
@@ -239,9 +239,9 @@ const CyberpunkMenu = () => {
                                     <motion.h2
                                         variants={textVariant}
                                         custom={0.25}
-                                        className="text-xl md:text-2xl font-bold text-gray-300 mb-2 flex items-center gap-2"
+                                        className="text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2"
                                     >
-                                        <TerminalSquare className="hidden md:block w-6 h-6 text-blue-400"/>
+                                        <TerminalSquare className="hidden md:block w-6 h-6 text-blue-600 dark:text-blue-400"/>
                                         Full-Stack Developer & UI Specialist
                                     </motion.h2>
 
@@ -253,7 +253,7 @@ const CyberpunkMenu = () => {
                                         className="flex items-center gap-2 mb-6"
                                     >
                                         <Sparkles className="w-3 h-3 text-blue-500 animate-pulse"/>
-                                        <h4 className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
+                                        <h4 className="text-xs tracking-widest opacity-70 text-blue-700 dark:text-blue-300 uppercase">
                                             Building the future of web
                                         </h4>
                                     </motion.div>
@@ -262,12 +262,12 @@ const CyberpunkMenu = () => {
                                     <motion.p
                                         variants={textVariant}
                                         custom={0.4}
-                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
+                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-800 dark:text-gray-200 mb-2 font-light"
                                     >
                                         I transform ideas into powerful digital solutions. Specializing in{" "}
                                         <span
-                                            className="font-bold text-blue-400">Next.js, React, TypeScript</span> and{" "}
-                                        <span className="font-bold text-blue-400">Node.js</span>, I craft scalable
+                                            className="font-bold text-blue-600 dark:text-blue-400">Next.js, React, TypeScript</span> and{" "}
+                                        <span className="font-bold text-blue-600 dark:text-blue-400">Node.js</span>, I craft scalable
                                         applications with exceptional user experiences.
                                     </motion.p>
 
@@ -275,7 +275,7 @@ const CyberpunkMenu = () => {
                                     <motion.p
                                         variants={textVariant}
                                         custom={0.45}
-                                        className="text-sm md:text-base opacity-70 text-gray-300 max-w-3xl mb-8"
+                                        className="text-sm md:text-base opacity-70 text-gray-700 dark:text-gray-300 max-w-3xl mb-8"
                                     >
                                         With 4+ years of hands-on experience, I've helped 12+ companies achieve their
                                         digital goals through cutting-edge technology and creative problem-solving.
@@ -293,7 +293,7 @@ const CyberpunkMenu = () => {
                                                 12+
                                             </div>
                                             <div
-                                                className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider mt-2 font-semibold">
                                                 Projects Delivered
                                             </div>
                                         </div>
@@ -304,7 +304,7 @@ const CyberpunkMenu = () => {
                                                 08+
                                             </div>
                                             <div
-                                                className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider mt-2 font-semibold">
                                                 Happy Clients
                                             </div>
                                         </div>
@@ -315,7 +315,7 @@ const CyberpunkMenu = () => {
                                                 04+
                                             </div>
                                             <div
-                                                className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider mt-2 font-semibold">
                                                 Years Experience
                                             </div>
                                         </div>
@@ -323,8 +323,8 @@ const CyberpunkMenu = () => {
 
                                     {/* Tech Stack */}
                                     <motion.div variants={textVariant} custom={0.7} className="mb-8">
-                                        <h3 className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
-                                            <Cpu className="w-4 h-4 text-blue-400"/>
+                                        <h3 className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
+                                            <Cpu className="w-4 h-4 text-blue-600 dark:text-blue-400"/>
                                             Tech Stack & Expertise
                                         </h3>
 
@@ -341,7 +341,7 @@ const CyberpunkMenu = () => {
                                                 <motion.span
                                                     key={i}
                                                     variants={itemVariant}
-                                                    className={`px-3 py-2  bg-blue-500/10 rounded-lg text-xs font-semibold text-blue-300 hover:bg-blue-500/20 hover:shadow-lg transition-all duration-300 cursor-default flex items-center gap-2`}
+                                                    className={`px-3 py-2  bg-blue-500/20 dark:bg-blue-500/10 rounded-lg text-xs font-semibold text-blue-700 dark:text-blue-300 hover:bg-blue-500/20 hover:shadow-lg transition-all duration-300 cursor-default flex items-center gap-2`}
                                                 >
                                                     <Atom className="w-3 h-3"/>
                                                     {tag}
@@ -377,12 +377,12 @@ const CyberpunkMenu = () => {
                                         ].map((stat, i) => (
                                             <div
                                                 key={i}
-                                                className="relative border border-blue-500/30 rounded-lg p-3 overflow-hidden bg-blue-500/5 flex flex-col gap-2"
+                                                className="relative border border-blue-500/30 rounded-lg p-3 overflow-hidden bg-blue-500/10 dark:bg-blue-500/5 flex flex-col gap-2"
                                             >
                                                 <stat.icon
-                                                    className="w-20 h-20 absolute opacity-15 right-0  text-blue-400"/>
-                                                <p className="text-xs text-gray-400 uppercase tracking-wider">{stat.label}</p>
-                                                <p className="text-base md:text-lg font-black text-blue-300">{stat.value}</p>
+                                                    className="w-20 h-20 absolute opacity-15 right-0  text-blue-600 dark:text-blue-400"/>
+                                                <p className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wider">{stat.label}</p>
+                                                <p className="text-base md:text-lg font-black text-blue-700 dark:text-blue-300">{stat.value}</p>
                                             </div>
                                         ))}
                                     </motion.div>
@@ -391,7 +391,7 @@ const CyberpunkMenu = () => {
                                     <motion.div
                                         variants={textVariant}
                                         custom={1.1}
-                                        className="opacity-40 font-cyber tracking-widest text-[10px] md:text-xs text-gray-500 border-t border-blue-500/20 pt-6"
+                                        className="opacity-40 font-cyber tracking-widest text-[10px] md:text-xs text-gray-500 dark:text-gray-500 border-t border-blue-500/20 pt-6"
                                     >
                                         ▸ CRAFTING DIGITAL EXCELLENCE SINCE 2020 ▸
                                     </motion.div>
@@ -469,9 +469,9 @@ const CyberpunkMenu = () => {
                                     {/* ABOUT TEXT */}
                                     <motion.div
                                         variants={itemVariant}
-                                        className="text-base md:text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 md:px-6 py-4 px-4 bg-green-500/5 rounded-r-lg"
+                                        className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 border-l-4 border-green-500 md:px-6 py-4 px-4 bg-green-500/10 dark:bg-green-500/5 rounded-r-lg"
                                     ><p className="mb-4"> I'm <span
-                                        className="font-black text-green-400">Malak Saad</span>, a passionate full-stack
+                                        className="font-black text-green-600 dark:text-green-400">Malak Saad</span>, a passionate full-stack
                                         developer and creative problem solver with a mission to build digital products
                                         that matter. With over 4 years of professional experience, I've dedicated myself
                                         to mastering modern web technologies and delivering exceptional results. </p>
@@ -485,28 +485,28 @@ const CyberpunkMenu = () => {
                                         {/* Expertise */}
                                         <div
                                             className="border-2 border-green-500/50 rounded-xl p-6  px-4 md:px-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
-                                            <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-green-600 dark:text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
                                                 <Layers className="w-6 h-6"/>
                                                 Expertise
                                             </h3>
-                                            <ul className="text-gray-300 text-sm space-y-3 font-semibold">
+                                            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-3 font-semibold">
                                                 <li className="flex items-center gap-2"><Cpu
-                                                    className="text-green-400 w-4"/> Full-Stack Web Development
+                                                    className="text-green-600 dark:text-green-400 w-4"/> Full-Stack Web Development
                                                 </li>
                                                 <li className="flex items-center gap-2"><PanelsTopLeft
-                                                    className="text-green-400 w-4"/> React & Next.js Architecture
+                                                    className="text-green-600 dark:text-green-400 w-4"/> React & Next.js Architecture
                                                 </li>
                                                 <li className="flex items-center gap-2"><Code
-                                                    className="text-green-400 w-4"/> TypeScript & Modern JavaScript
+                                                    className="text-green-600 dark:text-green-400 w-4"/> TypeScript & Modern JavaScript
                                                 </li>
                                                 <li className="flex items-center gap-2"><Database
-                                                    className="text-green-400 w-4"/> Backend & Database Design
+                                                    className="text-green-600 dark:text-green-400 w-4"/> Backend & Database Design
                                                 </li>
                                                 <li className="flex items-center gap-2"><Gauge
-                                                    className="text-green-400 w-4"/> Performance Optimization
+                                                    className="text-green-600 dark:text-green-400 w-4"/> Performance Optimization
                                                 </li>
                                                 <li className="flex items-center gap-2"><Rocket
-                                                    className="text-green-400 w-4"/> UI/UX Implementation
+                                                    className="text-green-600 dark:text-green-400 w-4"/> UI/UX Implementation
                                                 </li>
                                             </ul>
                                         </div>
@@ -514,28 +514,28 @@ const CyberpunkMenu = () => {
                                         {/* Achievements */}
                                         <div
                                             className="border-2 border-green-500/50 rounded-xl p-6  px-4 md:px-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
-                                            <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-green-600 dark:text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
                                                 <Award className="w-6 h-6"/>
                                                 Achievements
                                             </h3>
-                                            <ul className="text-gray-300 text-sm space-y-3 font-semibold">
+                                            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-3 font-semibold">
                                                 <li className="flex items-center gap-2"><TrendingUp
-                                                    className="text-green-400 w-4"/> 12+ Successful Projects
+                                                    className="text-green-600 dark:text-green-400 w-4"/> 12+ Successful Projects
                                                 </li>
                                                 <li className="flex items-center gap-2"><Users
-                                                    className="text-green-400 w-4"/> 05+ Global Clients
+                                                    className="text-green-600 dark:text-green-400 w-4"/> 05+ Global Clients
                                                 </li>
                                                 <li className="flex items-center gap-2"><Clock
-                                                    className="text-green-400 w-4"/> 99% On-time Delivery
+                                                    className="text-green-600 dark:text-green-400 w-4"/> 99% On-time Delivery
                                                 </li>
                                                 <li className="flex items-center gap-2"><User
-                                                    className="text-green-400 w-4"/> Mentor to 10+ Developers
+                                                    className="text-green-600 dark:text-green-400 w-4"/> Mentor to 10+ Developers
                                                 </li>
                                                 <li className="flex items-center gap-2"><Globe
-                                                    className="text-green-400 w-4"/> Open-source Contributor
+                                                    className="text-green-600 dark:text-green-400 w-4"/> Open-source Contributor
                                                 </li>
                                                 <li className="flex items-center gap-2"><BookOpen
-                                                    className="text-green-400 w-4"/> Tech Community Speaker
+                                                    className="text-green-600 dark:text-green-400 w-4"/> Tech Community Speaker
                                                 </li>
                                             </ul>
                                         </div>
@@ -546,7 +546,7 @@ const CyberpunkMenu = () => {
                                         variants={itemVariant}
                                         className="border-2 border-green-500/50 rounded-xl p-6  px-4 md:px-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all"
                                     >
-                                        <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
+                                        <h3 className="text-green-600 dark:text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
                                             <GraduationCap className="w-6 h-6 hidden md:block"/>
                                             Education & Certifications
                                         </h3>
@@ -554,29 +554,29 @@ const CyberpunkMenu = () => {
                                         <div className="grid md:grid-cols-2 gap-4">
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-200">BS in Computer Science</p>
-                                                    <p className="text-sm text-gray-400">UET • 2022</p>
+                                                    <p className="font-black text-gray-800 dark:text-gray-200">BS in Computer Science</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-400">UET • 2022</p>
                                                 </div>
                                             </div>
 
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-200">AWS Solutions Architect</p>
-                                                    <p className="text-sm text-gray-400">AWS • 2023</p>
+                                                    <p className="font-black text-gray-800 dark:text-gray-200">AWS Solutions Architect</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-400">AWS • 2023</p>
                                                 </div>
                                             </div>
 
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-200">Advanced React Developer</p>
-                                                    <p className="text-sm text-gray-400">Meta • 2024</p>
+                                                    <p className="font-black text-gray-800 dark:text-gray-200">Advanced React Developer</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-400">Meta • 2024</p>
                                                 </div>
                                             </div>
 
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
-                                                    <p className="font-black text-gray-200">Full-Stack Web Mastery</p>
-                                                    <p className="text-sm text-gray-400">Comprehensive Program •
+                                                    <p className="font-black text-gray-800 dark:text-gray-200">Full-Stack Web Mastery</p>
+                                                    <p className="text-sm text-gray-600 dark:text-gray-400">Comprehensive Program •
                                                         2025</p>
                                                 </div>
                                             </div>
@@ -591,14 +591,14 @@ const CyberpunkMenu = () => {
                                             {num: "24/7", label: "Dev Support", icon: Clock},
                                         ].map((item, i) => (
                                             <div key={i}
-                                                 className="relative overflow-hidden border border-green-500/30 rounded-lg p-4 bg-green-500/5 flex flex-col ">
+                                                 className="relative overflow-hidden border border-green-500/30 rounded-lg p-4 bg-green-500/10 dark:bg-green-500/5 flex flex-col ">
                                                 <item.icon
-                                                    className="w-20 h-20 absolute opacity-15 right-0 text-green-400"/>
+                                                    className="w-20 h-20 absolute opacity-15 right-0 text-green-600 dark:text-green-400"/>
 
                                                 <div
-                                                    className="text-2xl md:text-3xl font-black text-green-400 mb-1">{item.num}</div>
+                                                    className="text-2xl md:text-3xl font-black text-green-600 dark:text-green-400 mb-1">{item.num}</div>
                                                 <div
-                                                    className="text-xs text-gray-400 uppercase font-bold tracking-wider">{item.label}</div>
+                                                    className="text-xs text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider">{item.label}</div>
                                             </div>
                                         ))}
                                     </motion.div>
@@ -606,9 +606,9 @@ const CyberpunkMenu = () => {
                                     {/* FOOTER QUOTE */}
                                     <motion.p
                                         variants={itemVariant}
-                                        className="text-sm md:text-base text-gray-400 italic text-center border-top border-green-500/20 pt-6 flex items-center justify-center gap-2"
+                                        className="text-sm md:text-base text-gray-600 dark:text-gray-400 italic text-center border-top border-green-500/20 pt-6 flex items-center justify-center gap-2"
                                     >
-                                        <Sparkles className="w-4 h-4 text-green-400"/>
+                                        <Sparkles className="w-4 h-4 text-green-600 dark:text-green-400"/>
                                         "When I'm not coding, I explore emerging tech, open-source, articles,
                                         mentoring…"
                                     </motion.p>
@@ -673,7 +673,7 @@ const CyberpunkMenu = () => {
 
                                 {/* SUBTEXT */}
                                 <motion.p variants={textVariant} custom={0.3}
-                                          className="text-gray-400 mb-8 text-base max-w-2xl">
+                                          className="text-gray-600 dark:text-gray-400 mb-8 text-base max-w-2xl">
                                     Comprehensive web development solutions tailored to your unique business needs
                                 </motion.p>
 
@@ -686,37 +686,37 @@ const CyberpunkMenu = () => {
                                 >
                                     {[
                                         {
-                                            icon: <Palette className="text-purple-300 w-8 h-8"/>,
+                                            icon: <Palette className="text-purple-700 dark:text-purple-300 w-8 h-8"/>,
                                             title: "UI/UX Design",
                                             desc: "Beautiful, intuitive interfaces designed for maximum user engagement and conversion.",
                                             features: ["Wire framing", "Prototyping", "User Testing", "Design Systems"],
                                         },
                                         {
-                                            icon: <MonitorSmartphone className="text-purple-300 w-8 h-8"/>,
+                                            icon: <MonitorSmartphone className="text-purple-700 dark:text-purple-300 w-8 h-8"/>,
                                             title: "Frontend Development",
                                             desc: "Cutting-edge React and Next.js applications with stunning animations and interactions.",
                                             features: ["React", "Next.js", "TypeScript", "Framer Motion"],
                                         },
                                         {
-                                            icon: <Server className="text-purple-300 w-8 h-8"/>,
+                                            icon: <Server className="text-purple-700 dark:text-purple-300 w-8 h-8"/>,
                                             title: "Backend Development",
                                             desc: "Robust, scalable server-side solutions with secure APIs and databases.",
                                             features: ["Node.js", "Express", "GraphQL", "REST APIs"],
                                         },
                                         {
-                                            icon: <Smartphone className="text-purple-300 w-8 h-8"/>,
+                                            icon: <Smartphone className="text-purple-700 dark:text-purple-300 w-8 h-8"/>,
                                             title: "Responsive Design",
                                             desc: "Pixel-perfect designs that work flawlessly across all devices and screen sizes.",
                                             features: ["Mobile First", "Cross-browser", "Performance", "Accessibility"],
                                         },
                                         {
-                                            icon: <Rocket className="text-purple-300 w-8 h-8"/>,
+                                            icon: <Rocket className="text-purple-700 dark:text-purple-300 w-8 h-8"/>,
                                             title: "Performance & SEO",
                                             desc: "Optimized applications with lightning-fast load times and excellent search visibility.",
                                             features: ["Core Web Vitals", "SEO", "CDN", "Caching"],
                                         },
                                         {
-                                            icon: <Cloud className="text-purple-300 w-8 h-8"/>,
+                                            icon: <Cloud className="text-purple-700 dark:text-purple-300 w-8 h-8"/>,
                                             title: "Cloud Deployment",
                                             desc: "Secure, scalable hosting solutions with continuous integration and deployment.",
                                             features: ["AWS", "Vercel", "Docker", "CI/CD"],
@@ -731,11 +731,11 @@ const CyberpunkMenu = () => {
                                             <div
                                                 className="mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
 
-                                            <h3 className="text-base font-black text-purple-300 mb-2 uppercase tracking-wider">
+                                            <h3 className="text-base font-black text-purple-700 dark:text-purple-300 mb-2 uppercase tracking-wider">
                                                 {service.title}
                                             </h3>
 
-                                            <p className="text-xs text-gray-400 mb-4">{service.desc}</p>
+                                            <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">{service.desc}</p>
 
                                             <div className="flex flex-wrap gap-2 pt-4 border-t border-purple-500/20">
                                                 {service.features.map((feature, j) => (
@@ -756,7 +756,7 @@ const CyberpunkMenu = () => {
                                     variants={itemVariant}
                                     className="border-2 border-purple-500/50 rounded-2xl p-8 bg-gradient-to-br from-purple-500/5 to-purple-400/5"
                                 >
-                                    <h2 className="text-xl md:text-3xl font-extrabold text-purple-400 mb-10 uppercase tracking-wider text-center">
+                                    <h2 className="text-xl md:text-3xl font-extrabold text-purple-600 dark:text-purple-400 mb-10 uppercase tracking-wider text-center">
                                         My Development Process
                                     </h2>
 
@@ -766,25 +766,25 @@ const CyberpunkMenu = () => {
                                                 num: "01",
                                                 title: "Discovery",
                                                 desc: "Understand your vision and requirements",
-                                                icon: <Lightbulb className="w-6 h-6 text-purple-300"/>,
+                                                icon: <Lightbulb className="w-6 h-6 text-purple-700 dark:text-purple-300"/>,
                                             },
                                             {
                                                 num: "02",
                                                 title: "Planning",
                                                 desc: "Strategy and technical architecture and design",
-                                                icon: <Layers className="w-6 h-6 text-purple-300"/>,
+                                                icon: <Layers className="w-6 h-6 text-purple-700 dark:text-purple-300"/>,
                                             },
                                             {
                                                 num: "03",
                                                 title: "Development",
                                                 desc: "Building with excellence and precision",
-                                                icon: <Workflow className="w-6 h-6 text-purple-300"/>,
+                                                icon: <Workflow className="w-6 h-6 text-purple-700 dark:text-purple-300"/>,
                                             },
                                             {
                                                 num: "04",
                                                 title: "Delivery",
                                                 desc: "Launch and continuous support and more",
-                                                icon: <SearchCheck className="w-6 h-6 text-purple-300"/>,
+                                                icon: <SearchCheck className="w-6 h-6 text-purple-700 dark:text-purple-300"/>,
                                             },
                                         ].map((step, i) => (
                                             <motion.div
@@ -794,12 +794,12 @@ const CyberpunkMenu = () => {
                                                 className="relative"
                                             >
                                                 <div
-                                                    className="border border-purple-500/30 rounded-xl p-6 px-4 md:px-6 text-center bg-purple-500/5 hover:bg-purple-500/10 transition-all duration-300 shadow-sm">
+                                                    className="border border-purple-500/30 rounded-xl p-6 px-4 md:px-6 text-center bg-purple-500/10 dark:bg-purple-500/5 hover:bg-purple-500/20 dark:bg-purple-500/10 transition-all duration-300 shadow-sm">
                                                     <div className="flex justify-center mb-3">{step.icon}</div>
                                                     <div
-                                                        className="text-xl md:text-2xl font-bold text-purple-400 mb-2">{step.num}</div>
-                                                    <p className="font-semibold text-gray-300 text-sm mb-1">{step.title}</p>
-                                                    <p className="text-xs md:text-sm text-gray-500">{step.desc}</p>
+                                                        className="text-xl md:text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">{step.num}</div>
+                                                    <p className="font-semibold text-gray-700 dark:text-gray-300 text-sm mb-1">{step.title}</p>
+                                                    <p className="text-xs md:text-sm text-gray-500 dark:text-gray-500">{step.desc}</p>
                                                 </div>
                                             </motion.div>
                                         ))}
@@ -865,7 +865,7 @@ const CyberpunkMenu = () => {
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-400 mb-8 text-base max-w-2xl"
+                                    className="text-gray-600 dark:text-gray-400 mb-8 text-base max-w-2xl"
                                 >
                                     Showcasing some of my best projects that demonstrate expertise in modern web
                                     development
@@ -953,7 +953,7 @@ const CyberpunkMenu = () => {
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-400 mb-8 text-base max-w-2xl"
+                                    className="text-gray-600 dark:text-gray-400 mb-8 text-base max-w-2xl"
                                 >
                                     Have an exciting project? I'm always interested in hearing about new opportunities
                                     and collaborations.
@@ -972,17 +972,17 @@ const CyberpunkMenu = () => {
                                         >
                                             {[
                                                 {
-                                                    icon: <Mail className="w-10 h-10 text-red-400"/>,
+                                                    icon: <Mail className="w-10 h-10 text-red-600 dark:text-red-400"/>,
                                                     label: "Email",
                                                     value: "saad@dragondevs.co"
                                                 },
                                                 {
-                                                    icon: <Phone className="w-10 h-10 text-red-400"/>,
+                                                    icon: <Phone className="w-10 h-10 text-red-600 dark:text-red-400"/>,
                                                     label: "Phone",
                                                     value: "+923015488577"
                                                 },
                                                 {
-                                                    icon: <MapPin className="w-10 h-10 text-red-400"/>,
+                                                    icon: <MapPin className="w-10 h-10 text-red-600 dark:text-red-400"/>,
                                                     label: "Location",
                                                     value: "Peshawar, Pakistan"
                                                 },
@@ -1003,11 +1003,11 @@ const CyberpunkMenu = () => {
                                                         {contact.icon}
                                                     </div>
 
-                                                    <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">
+                                                    <p className="text-sm text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider mb-2">
                                                         {contact.label}
                                                     </p>
 
-                                                    <p className="text-lg font-black text-red-300">{contact.value}</p>
+                                                    <p className="text-lg font-black text-red-700 dark:text-red-300">{contact.value}</p>
                                                 </motion.div>
                                             ))}
                                         </motion.div>
@@ -1023,14 +1023,14 @@ const CyberpunkMenu = () => {
 
                                 {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
-                                    <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Response
+                                    <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/10 dark:bg-red-500/5">
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider mb-2">Response
                                             Time</p>
-                                        <p className="text-xl font-black text-red-300">Within 12 minutes</p>
+                                        <p className="text-xl font-black text-red-700 dark:text-red-300">Within 12 minutes</p>
                                     </div>
-                                    <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Availability</p>
-                                        <p className="text-xl font-black text-red-300">Open for New Projects</p>
+                                    <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/10 dark:bg-red-500/5">
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider mb-2">Availability</p>
+                                        <p className="text-xl font-black text-red-700 dark:text-red-300">Open for New Projects</p>
                                     </div>
                                 </motion.div>
 
@@ -1232,6 +1232,26 @@ const CyberpunkMenu = () => {
                                 </motion.div>
 
                             </div>
+                            <motion.div
+                                className="fixed top-6 md:right-6 right-4 flex flex-col gap-3 z-50"
+                                initial={{opacity: 0, x: -20}}
+                                animate={{opacity: 1, x: 0}}
+                                transition={{delay: 1.5}}
+                            >
+                                {socialLinks.map((s, i) => (
+                                    <motion.a
+                                        key={i}
+                                        href={s.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        whileHover={{scale: 1.3, rotate: 5}}
+                                        whileTap={{scale: 0.95}}
+                                        className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 ${page.bracketColor} ${page.text} transition-all duration-300 shadow-lg ${page.shadowColor}`}
+                                    >
+                                        {s.icon}
+                                    </motion.a>
+                                ))}
+                            </motion.div>
 
                         </div>
 
