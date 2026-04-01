@@ -1,122 +1,126 @@
 import React from "react";
-import clsx from "clsx";
+import { motion as m, HTMLMotionProps } from "motion/react";
+import { twMerge } from "tailwind-merge";
+import clsx, { ClassValue } from "clsx";
 
-type CyberButtonProps = {
+function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
+}
+
+export interface CyberButtonProps extends HTMLMotionProps<"button"> {
     label?: string;
-    onClick?: () => void;
-    className?: string;
     size?: "sm" | "md" | "lg";
     primaryColor?: string;
     accentColor?: string;
-};
+}
 
 const sizes = {
-    sm: "w-[9em] h-[3.2em] text-[12px]",
-    md: "w-[11em] h-[4em] text-[13px]",
-    lg: "w-[13em] h-[4.8em] text-[14px]",
+    sm: "min-w-[120px] h-10 px-6 text-xs",
+    md: "min-w-[160px] h-12 px-8 text-sm",
+    lg: "min-w-[200px] h-14 px-10 text-base",
 };
 
-const CyberButton: React.FC<CyberButtonProps> = ({
-                                                     label = "PLAY",
-                                                     onClick,
-                                                     className,
-                                                     size = "md",
-                                                     primaryColor = "#2761c3",
-                                                     accentColor = "#27c39f",
-                                                 }) => {
-    return (
-        <div className={clsx("relative inline-block", className)}>
-            {/* Dynamic animations */}
-            <style>{`
-        @keyframes leftArrow {
-          from { transform: translateX(0); }
-          to { transform: translateX(10px); }
-        }
-
-        @keyframes rightArrow {
-          from { transform: translateX(0); }
-          to { transform: translateX(-10px); }
-        }
-
-        @keyframes greenLight {
-          to { box-shadow: inset 0 0 32px ${accentColor}; }
-        }
-
-        @keyframes changeColor {
-          to { background-color: ${accentColor}; }
-        }
-
-        @keyframes lightEffect {
-          to { box-shadow: 0 0 6px ${accentColor}; }
-        }
-      `}</style>
-
-            <button
+export const CyberButton = React.forwardRef<HTMLButtonElement, CyberButtonProps>(
+    (
+        {
+            label = "PLAY",
+            className,
+            size = "md",
+            primaryColor = "#00f0ff", // Bright neon cyan by default
+            accentColor = "#ff003c",  // Bright neon pink/red
+            children,
+            onClick,
+            ...props
+        },
+        ref
+    ) => {
+        return (
+            <m.button
+                ref={ref}
                 onClick={onClick}
-                className={clsx(
-                    "group relative uppercase tracking-wide w-full px-8 text-blue-300 bg-transparent border-none font-cyber  outline-none",
-                    sizes[size]
+                whileHover="hover"
+                whileTap="tap"
+                initial="initial"
+                className={cn(
+                    "group relative inline-flex items-center justify-center font-cyber uppercase tracking-[0.2em] outline-none transition-all duration-300",
+                    sizes[size],
+                    className
                 )}
+                style={
+                    {
+                        "--primary": primaryColor,
+                        "--accent": accentColor,
+                    } as React.CSSProperties
+                }
+                {...props}
             >
-                {label}
-
-                {/* Border Clip */}
+                {/* Base Background with Slanted Edges */}
                 <div
-                    className="absolute inset-0 overflow-hidden border-[5px] border-double shadow-[inset_0_0_15px]"
+                    className="absolute inset-0 bg-[var(--primary)]/10 backdrop-blur-sm z-0 transition-colors duration-300 group-hover:bg-[var(--primary)]/20"
                     style={{
-                        borderColor: primaryColor,
-                        boxShadow: `inset 0 0 15px ${primaryColor}`,
                         clipPath:
-                            "polygon(30% 0%,70% 0%,100% 30%,100% 70%,70% 100%,30% 100%,0% 70%,0% 30%)",
+                            "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)",
                     }}
                 >
-                    {/* Corners */}
-                    {[
-                        "-top-[1.9em] -left-[3em]",
-                        "-top-[2em] left-[91%]",
-                        "top-[2.1em] -left-[2.1em]",
-                        "top-[45%] left-[88%]",
-                    ].map((pos, i) => (
-                        <span
-                            key={i}
-                            className={clsx(
-                                "absolute w-[4em] h-[4em] rotate-45 transition-all duration-200 group-hover:scale-125",
-                                pos
-                            )}
-                            style={{
-                                backgroundColor: primaryColor,
-                                boxShadow: `inset 1px 1px 8px ${primaryColor}`,
-                                animation:
-                                    "changeColor 0.1s ease-in-out forwards, lightEffect 0.2s linear 0.4s forwards",
-                            }}
-                        />
-                    ))}
+                    {/* Hover Scanning Glitch */}
+                    <m.div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-[var(--primary)]/30 to-transparent z-0"
+                        variants={{
+                            initial: { x: "-100%" },
+                            hover: { 
+                                x: "200%", 
+                                transition: { duration: 1.5, repeat: Infinity, ease: "linear" } 
+                            },
+                        }}
+                    />
                 </div>
 
-                {/* Left Arrow */}
-                <span
-                    className="absolute top-[35%] h-[30%] w-[11%] transition-all duration-200
-                     left-[-13.5%] group-hover:left-[103%]"
+                {/* Cyber Geometric Border */}
+                <div
+                    className="absolute inset-0 border border-[var(--primary)]/50 z-10 transition-all duration-300 group-hover:border-[var(--primary)] group-hover:shadow-[0_0_15px_var(--primary)]"
                     style={{
-                        backgroundColor: primaryColor,
-                        clipPath: "polygon(100% 0,100% 100%,0 50%)",
-                        animation: "leftArrow 0.6s ease-in-out infinite alternate",
+                        clipPath:
+                            "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)",
                     }}
                 />
 
-                {/* Right Arrow */}
-                <span
-                    className="absolute top-[35%] h-[30%] w-[11%] transition-all duration-200
-                     left-[102%] group-hover:left-[-15%]"
+                {/* Glitch Overlay on Hover */}
+                <m.div
+                    className="absolute inset-0 bg-[var(--accent)] z-20 mix-blend-overlay opacity-0 pointer-events-none"
+                    variants={{
+                        hover: {
+                            opacity: [0, 0.8, 0, 0.5, 0],
+                            x: [0, -3, 3, -1, 1, 0],
+                            transition: { duration: 0.4, ease: "easeInOut" },
+                        },
+                    }}
                     style={{
-                        backgroundColor: primaryColor,
-                        clipPath: "polygon(100% 50%,0 0,0 100%)",
-                        animation: "rightArrow 0.6s ease-in-out infinite alternate",
+                        clipPath:
+                            "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)",
                     }}
                 />
-            </button>
-        </div>
-    );
-};
 
+                {/* Text Content */}
+                <span className="relative z-30 text-[var(--primary)] font-semibold group-hover:text-white transition-colors duration-300 drop-shadow-[0_0_8px_var(--primary)]">
+                    {(children as React.ReactNode) || label}
+                </span>
+
+                {/* Micro tech details */}
+                <div className="absolute top-0 right-0 w-4 h-[2px] bg-[var(--primary)] shadow-[0_0_5px_var(--primary)] z-20" />
+                <div className="absolute bottom-0 left-0 w-4 h-[2px] bg-[var(--primary)] shadow-[0_0_5px_var(--primary)] z-20" />
+
+                {/* Bottom Expansion Bar */}
+                <m.div
+                    className="absolute bottom-0 left-4 right-4 h-[2px] bg-[var(--primary)] shadow-[0_0_10px_var(--primary)] z-20 origin-center"
+                    variants={{
+                        initial: { scaleX: 0, opacity: 0 },
+                        hover: { scaleX: 1, opacity: 1, transition: { duration: 0.3 } },
+                    }}
+                />
+            </m.button>
+        );
+    }
+);
+
+CyberButton.displayName = "CyberButton";
 export default CyberButton;
