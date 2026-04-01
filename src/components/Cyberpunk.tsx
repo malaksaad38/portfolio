@@ -44,6 +44,7 @@ import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import WhatsAppButton from "@/components/WhatsappButton";
 import CyberButton from "@/components/CyberButton";
+import {CyberModeToggle} from "@/components/ui/CyberModeToggle";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState('home');
@@ -1062,6 +1063,12 @@ const CyberpunkMenu = () => {
     ]
     return (
         <div className="flex bg-background w-full h-screen relative overflow-hidden">
+            {/* Mode Toggle at Top Left */}
+            <div className="fixed -top-1 md:top-0 md:left-1 left-2 w-10 md:w-14 flex items-center justify-center z-50 mix-blend-difference hover:mix-blend-normal transition-all duration-300">
+                <div className="transform-gpu scale-50 md:scale-[0.55]">
+                    <CyberModeToggle />
+                </div>
+            </div>
 
             {/* Navigation tabs */}
             <div className="flex w-full h-full overflow-hidden relative">
@@ -1182,10 +1189,10 @@ const CyberpunkMenu = () => {
 
 
                             <div
-                                className="fixed left-0 -top-10 h-full md:w-14 w-10 flex flex-col items-center justify-center">
+                                className="fixed left-0 top-0 h-full md:w-14 w-10 flex flex-col items-center justify-center">
                                 {/* MAIN NAV BUTTONS */}
                                 <motion.div
-                                    className="flex flex-col items-center justify-center space-y-18"
+                                    className="flex flex-col items-center justify-center space-y-18  "
                                     initial={{opacity: 0, y: 20}}
                                     animate={{opacity: 1, y: 0}}
                                     transition={{duration: 0.6, ease: "easeOut"}}
@@ -1194,7 +1201,7 @@ const CyberpunkMenu = () => {
                                         <motion.button
                                             key={index}
                                             onClick={item.action}
-                                            className={`rotate-90 text-sm font-normal  font-cyber tracking-wide   ${page.title === item.label ? page.text : ""}  transition-all duration-300 hover:tracking-wider hover:font-cyber-outline hover:font-bold `}
+                                            className={`rotate-90 text-sm font-normal font-cyber tracking-wide ${page.title === item.label ? page.text : ""} transition-all duration-300 hover:tracking-wider hover:font-cyber-outline hover:font-bold`}
                                             whileHover={{opacity: 1}}
                                             whileTap={{scale: 0.9}}
                                             initial={{opacity: 0, y: 10}}
