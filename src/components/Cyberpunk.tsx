@@ -1061,12 +1061,15 @@ const CyberpunkMenu = () => {
         {label: "Portfolio", action: () => handlePageChange('portfolio')},
         {label: "Contact", action: () => handlePageChange('contact')},
     ]
+    const activePageData = activePage ? pages.find(p => p.id === activePage) : null;
+    const activeColor = activePageData ? activePageData.glowColor : undefined;
+
     return (
         <div className="flex bg-background w-full h-screen relative overflow-hidden">
             {/* Mode Toggle at Top Left */}
             <div className="fixed -top-1 md:top-0 md:left-1 left-2 w-10 md:w-14 flex items-center justify-center z-50 mix-blend-difference hover:mix-blend-normal transition-all duration-300">
                 <div className="transform-gpu scale-50 md:scale-[0.55]">
-                    <CyberModeToggle />
+                    <CyberModeToggle activeColor={activeColor} />
                 </div>
             </div>
 
@@ -1229,26 +1232,6 @@ const CyberpunkMenu = () => {
                                 </motion.div>
 
                             </div>
-                            <motion.div
-                                className="fixed top-6 md:right-6 right-4 flex flex-col gap-3 z-50"
-                                initial={{opacity: 0, x: -20}}
-                                animate={{opacity: 1, x: 0}}
-                                transition={{delay: 1.5}}
-                            >
-                                {socialLinks.map((s, i) => (
-                                    <motion.a
-                                        key={i}
-                                        href={s.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        whileHover={{scale: 1.3, rotate: 5}}
-                                        whileTap={{scale: 0.95}}
-                                        className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 ${page.bracketColor} ${page.text} transition-all duration-300 shadow-lg ${page.shadowColor}`}
-                                    >
-                                        {s.icon}
-                                    </motion.a>
-                                ))}
-                            </motion.div>
 
                         </div>
 

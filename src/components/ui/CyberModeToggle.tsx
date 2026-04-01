@@ -6,7 +6,7 @@ import { useTheme } from "next-themes"
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 
-export function CyberModeToggle() {
+export function CyberModeToggle({ activeColor }: { activeColor?: string }) {
   const { setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -29,16 +29,24 @@ export function CyberModeToggle() {
     setTheme(isDark ? "light" : "dark")
   }
 
+  const currentGlow = activeColor || (isDark ? "#2761c3" : "#f59e0b");
+  const currentShadow = activeColor 
+    ? `0 0 20px ${activeColor}66` // 40% opacity in hex
+    : (isDark ? "0 0 20px rgba(39, 97, 195, 0.4)" : "0 0 20px rgba(245, 158, 11, 0.4)");
+
+  const moonColor = activeColor || "#60a5fa"
+  const sunColor = activeColor || "#f59e0b"
+  const moonDropShadow = activeColor ? `drop-shadow(0 0 8px ${activeColor}cc)` : "drop-shadow(0 0 8px rgba(96,165,250,0.8))"
+  const sunDropShadow = activeColor ? `drop-shadow(0 0 8px ${activeColor}cc)` : "drop-shadow(0 0 8px rgba(245,158,11,0.8))"
+
   return (
     <div className="relative group p-1 inline-block">
       {/* Animated Glow / Orbit */}
       <motion.div
         className="absolute inset-0 rounded-xl blur-md opacity-20 group-hover:opacity-60 transition-opacity duration-500"
         animate={{
-          backgroundColor: isDark ? "#2761c3" : "#f59e0b",
-          boxShadow: isDark 
-            ? "0 0 20px rgba(39, 97, 195, 0.4)" 
-            : "0 0 20px rgba(245, 158, 11, 0.4)"
+          backgroundColor: currentGlow,
+          boxShadow: currentShadow
         }}
       />
 
@@ -73,7 +81,7 @@ export function CyberModeToggle() {
               exit={{ y: -20, rotate: -45, opacity: 0 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
             >
-              <Moon className="w-6 h-6 text-blue-400 drop-shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
+              <Moon className="w-6 h-6" style={{ color: moonColor, filter: moonDropShadow }} />
             </motion.div>
           ) : (
             <motion.div
@@ -83,7 +91,7 @@ export function CyberModeToggle() {
               exit={{ y: -20, rotate: -45, opacity: 0 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
             >
-              <Sun className="w-6 h-6 text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.8)]" />
+              <Sun className="w-6 h-6" style={{ color: sunColor, filter: sunDropShadow }} />
             </motion.div>
           )}
         </AnimatePresence>
