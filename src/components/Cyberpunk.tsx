@@ -195,7 +195,7 @@ const CyberpunkMenu = () => {
                                     <img
                                         src="/my-image.png"
                                         alt="Profile"
-                                        className="w-full h-[50vh] md:w-[68vh] md:h-[80vh] -mt-8 md:-mt-0 opacity-80 object-cover object-center"
+                                        className="w-full h-[50vh] md:w-[68vh] md:h-[80vh] -mt-8 md:-mt-0  object-cover object-center"
                                     />
                                     {[0, 1].map((i) => (
                                         <motion.div
