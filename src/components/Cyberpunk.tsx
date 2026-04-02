@@ -741,7 +741,7 @@ const CyberpunkMenu = () => {
                                                 {service.features.map((feature, j) => (
                                                     <span
                                                         key={j}
-                                                        className="text-[11px] px-2 py-1 bg-purple-500/20 text-purple-200 rounded font-semibold"
+                                                        className="text-[11px] px-2 py-1 bg-purple-500/20 dark:text-purple-200 text-purple-900 rounded font-semibold"
                                                     >
                                 {feature}
                             </span>

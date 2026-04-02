@@ -86,7 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                         <span
                             key={i}
                             className="text-[11px] md:text-xs px-2 py-1 bg-amber-500/20
-                            text-amber-200 rounded font-semibold"
+                            dark:text-amber-200 text-amber-900 rounded font-semibold"
                         >
                             {tag}
                         </span>
