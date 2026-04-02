@@ -90,7 +90,7 @@ export default function ContactForm() {
                         onChange={(e) =>
                             setFormData({...formData, name: e.target.value})
                         }
-                        className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
+                        className="w-full pl-10 dark:bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                         text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                         focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
@@ -107,7 +107,7 @@ export default function ContactForm() {
                         onChange={(e) =>
                             setFormData({...formData, email: e.target.value})
                         }
-                        className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
+                        className="w-full pl-10 dark:bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                         text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                         focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
@@ -125,7 +125,7 @@ export default function ContactForm() {
                     onChange={(e) =>
                         setFormData({...formData, subject: e.target.value})
                     }
-                    className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
+                    className="w-full pl-10 dark:bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                     text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                     focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                 />
@@ -142,7 +142,7 @@ export default function ContactForm() {
                     onChange={(e) =>
                         setFormData({...formData, message: e.target.value})
                     }
-                    className="w-full md:h-72 pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
+                    className="w-full md:h-72 pl-10 dark:bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                     text-foreground/80 placeholder-gray-600 focus:outline-none focus:border-red-400
                     focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none font-semibold text-sm md:text-base"
                 />
